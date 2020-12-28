@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Weapon X.css" type="text/css" media="all" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200&family=Playfair+Display:ital@1&family=Raleway&family=Reem+Kufi&display=swap" rel="stylesheet">
+  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/b29e93a16f.js" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body>
+    <style>
+      html, body{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.loader-wrapper {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width:100vw;
+  background-color:#350969;
+}
+
+.loader{
+ animation: loading 3s linear infinite;
+ position:absolute;
+}
+
+.load {
+  margin-top:50px;  
+  display: block;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background-color:#fff;
+}
+
+.loader:nth-child(1) {
+  animation-delay:0.2s;
+}
+.loader:nth-child(2) {
+  animation-delay:0.35s;
+}
+.loader:nth-child(3) {
+  animation-delay:0.5s;
+}
+.loader:nth-child(4) {
+  animation-delay:0.65s;
+}
+.loader:nth-child(5) {
+  animation-delay:0.8s;
+}
+.loader:nth-child(6) {
+  animation-delay:0.95s;
+}
+
+@keyframes loading {
+  
+  36%{
+    transform:rotate(250deg);
+  }
+  
+  46%{
+    transform:rotate(450deg);
+  }
+  
+  76%{
+    transform:rotate(720deg);
+    opacity:1;
+  }
+  
+  78%{
+    opacity:0;
+  }
+  
+  100%{
+    transform:rotate(0deg);
+    opacity:0;
+  }
+}
+
+.content-wrapper{
+  background:#fff;
+  height: 100vh;
+  width:100vw;
+  display: none;
+}
+
+.carousel-inner img {
+  width:100vw;
+  height:60vh;
+  filter:brightness(85%);
+  
+}
+
+.header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height:45px;
+  width:100vw;
+  background-color: #350969;
+  color:white;
+  font-weight:400;
+  font-size:1.5em;
+  z-index:2;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+
+.header-text {
+  margin:0.5em;
+}
+
+.menu-icon {
+  margin:0.5em;
+  z-index:99;
+ 
+}
+
+.icon {
+  width:30px;
+  height:2px;
+  border-radius:40% 40% 40% 40%;
+  background-color: #fff;
+  margin:6px 0;
+  box-shadow:0 2px 2px #333;
+  transition: all 0.4s ease-in-out;
+}
+
+.icon-X .icon1 {
+  transform-origin:100% 50%;
+  transform: rotate(-45deg) translateY(-3.5px);
+}
+
+.icon-X .icon2 {
+  opacity:0;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-X .icon3 {
+  transform-origin:100% 50%;
+  transform: rotate(45deg) translateY(3.5px);
+}
+
+
+.nav-bar {
+  position:absolute;
+  top:0;
+  width:100vw;
+  height:0;
+  background-color:#0d0d0d;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  overflow:hidden;
+  z-index:2;
+  transition: height 0.3s ease-in-out;
+}
+
+.nav-bar-visible {
+  height:40%;
+  
+}
+
+.nav-list {
+  list-style:none;
+  line-height:1.7rem;
+  text-align:center;
+  margin-top:1.5rem;
+  text-transform:uppercase;
+}
+
+.nav-link a {
+  font-size:0.9em;
+  text-decoration:none;
+  background:transparent;
+  color:#fff;
+  transition:0.1s ease-out;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav-link a:hover, .nav-link a:active {
+  color:#350969;
+  font-size:1.1em;
+  background-color:inherit;
+  text-decoration:none;
+}
+
+.nav-link a:active {
+  color:#350969;
+  background-color:inherit;
+  text-decoration:none;
+}
+
+.green {
+  color:#0e6a05;
+  animation:change 3s linear infinite;
+  
+}
+
+@keyframes change {
+  30%{
+    color:#0e6a05;
+  }
+  
+  65%{
+    color:#b20a0a;
+  }
+  
+  100%{
+    color:#0e6a05;
+  }
+}
+
+
+.season {
+  text-align:left;
+  font-family: 'Nunito', sans-serif;
+  margin:10px;
+}
+
+/*@keyframes typing { 
+  to {
+    width: 103ch; 
+  } 
+
+}
+*/
+
+.cursor {
+  color: #0c0c0c;
+  animation: cursor 0.5s step-end infinite;
+ 
+}
+
+
+.emphasized-text {
+  font-size:1.1em;
+  font-style: italic;
+  color:#350969;
+  font-weight:bold;
+}
+
+#about {
+  margin-top:5vh;
+}
+
+.sub-heading {
+  text-align:left;
+  letter-spacing: 1px;
+  font-family: 'Nunito', sans-serif;
+  font-size:1.5em;
+  color:#350969;
+  margin:10px;
+  font-weight: bolder;
+}
+
+.sub-image {
+  width:150px;
+  height:200px;
+  margin:10px;
+}
+
+.sub-text {
+  text-align: left;
+  font-size:1.1em;
+  color:#0c0c0c;
+  font-family: 'Raleway', sans-serif;
+  margin:10px;
+}
+
+.newyear {
+  text-transform:uppercase;
+  font-size:1.3em;
+  width:100%;
+  background-color: #350969;
+  font-family: 'Reem Kufi', sans-serif;
+  color:#fff;
+  text-align:center;
+  padding:5px;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+#countdown {
+  text-align:center;
+  font-size:1.7em;
+  font-family: 'Nunito', sans-serif;
+  color:#0c0c0c;
+  letter-spacing: 1px;
+}
+
+#contact {
+  height:20em;
+  width:100%;
+  position:relative;
+  bottom:0;
+  clip-path: url(#svgPath);
+  background-color: #350969;
+  padding-top:12vh;
+}
+
+.contact-heading {
+  color:#fff;
+  font-family: 'Reem Kufi', sans-serif;
+  letter-spacing:1px;
+  font-size:1.5em;
+  text-transform:uppercase;
+  text-align:center;
+  text-decoration:underline;
+}
+
+.author {
+  font-size:0.9em;
+  font-family: 'Raleway', sans-serif;
+  color:#fff;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  text-align: center;
+  padding-top:5px;
+  border-top:1px solid white;
+}
+
+.text-button {
+  color:#fff;
+  text-align:center;
+}
+
+.icon-bg {
+  color: #0b49ed;
+  margin:5px;
+  transition:.3s;
+}
+
+.icon-span:hover .icon-bg {
+  color:#b0112d;
+}
+
+.icon-V {
+  color:#fff;
+  margin:5px;
+  transition:.3s;
+}
+
+.social-text {
+  color:#fff;
+  font-size:1.1em;
+  font-family: 'Raleway',sans-serif;
+  padding:10px;
+}
+
+.author-link {
+  color:#0b49ed;
+  text-decoration: none;
+}
+
+.author-link:hover,
+.author-link:active {
+  color:#0b49ed;
+  font-weight:bolder;
+  text-decoration:none;
+}
+    </style>
+    
+<div class="loader-wrapper">
+<div class="loader">
+  <div class="load"></div>
+</div>
+<div class="loader">
+  <div class="load"></div>
+</div>
+<div class="loader">
+  <div class="load"></div>
+</div>
+<div class="loader">
+  <div class="load"></div>
+</div>
+<div class="loader">
+  <div class="load"></div>
+</div>
+<div class="loader">
+  <div class="load"></div>
+</div>
+
+</div>
+
+   <div class="content-wrapper">
+     <div id="home">
+       <div class="header">
+         <div class="header-text">Fr. Emma's Web</div>
+       <div class="menu-icon">
+         <div class="icon icon1"></div>
+         <div class="icon icon2"></div>
+         <div class="icon icon3"></div>
+       </div>
+       
+       </div>
+       
+    <nav class="nav-bar">
+      <ul class= "nav-list">
+      <li class="nav-link"><a class="link-item" href="#home">Home</a></li>
+      <li class="nav-link"><a class="link-item" href="#about">About</a></li>
+      <li class="nav-link"><a class="link-item" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+       
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+ 
+  <ul class="carousel-indicators">
+    <li  data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+    <li data-target="#demo" data-slide-to="4"></li>
+    <li data-target="#demo" data-slide-to="5"></li>
+    <li data-target="#demo" data-slide-to="6"></li>
+  </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <img src="https://dl.dropbox.com/s/fsip7i0tjffch9q/FB_IMG_16085474090129046.jpg" alt="Father's Image1">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.dropbox.com/s/l43m1pc31b79mrh/2348130129729_status_4df9c83421e743168cc01af67b667c49.jpg?raw=1" alt="Father's Image2">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dl.dropbox.com/s/751kiqf923ghnlf/FB_IMG_16085474966120383.jpg" alt="Father's Image3">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dl.dropbox.com/s/g0mbyyksarsto7s/2348130129729_status_5eee792375a140da9030693d72ebcd4b.jpg" alt="Father's Image4">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dl.dropbox.com/s/2qiz73r358wgwfb/2348130129729_status_10f4ba0f3d1d486ca7636751ab6b28d5.jpg" alt="Father's Image5">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dl.dropbox.com/s/pqe2eu73sow718r/FB_IMG_16086309555412916.jpg" alt="Father's Image6">
+    </div>
+    <div class="carousel-item">
+      <img src="https://dl.dropbox.com/s/0ge4gx3ygq0y7ko/FB_IMG_16086311639140728.jpg" alt="Father's Image7">
+    </div>
+  </div>
+
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+   <p class="season"></p>
+    </div>
+   <div id="about">
+   <p class="sub-heading">Bio:</p>
+   <p class="sub-text"><span class="emphasized-text">Rev.Fr. Emmanuel Ezenwata (Holy Man)</span> is a Catholic Priest of Awka Diocese and currently the Parish Priest of St.John the Apostle & Evangelist Catholic Church, Agulu, Anaocha L.G.A. of Anambra State, Nigeria, and initiator cum spiritual director of Angelic Adoration Prayer Ministry. Naturally, he is easy going, humble, simple, unassuming and lover of holiness of life. As a Firebrand Charismatic Priest, he dedicates his time to prayer and total well being of the faithful. Meanwhile, he uses Revivals, Conferences, Retreats and Crusades to reach out to the sick, the poor and souls thirsting for transformation of lives.</p> 
+   <p class="sub-heading">Born on:</p>
+   <p class="sub-text">December 28th 1973</p> 
+   <p class="sub-heading">Hails from:</p>
+   <p class="sub-text">Achina, Aguata LGA, Anambra State</p> 
+    <p class="sub-heading">Studied at:</p>
+   <p class="sub-text">Bigard Memorial Seminary Enugu</p> 
+   <p class="sub-heading">Ordained on:</p>
+   <p class="sub-text">21st August 2004</p> 
+   <p class="sub-heading">Books:</p>
+   <img src="https://www.dropbox.com/s/ricznobjypnx0ee/1609166853032.png?raw=1" class="sub-image" alt="Book 1">
+   <p class="sub-text">Holy Ghost Fire — FALL ON ME</p> 
+   <img src="https://dl.dropbox.com/s/5pqezyjc0fv2hzn/1609166914564.png" class="sub-image" alt="Book 2">
+   <p class="sub-text">PRAYERS that move ANGELS to assist us</p> 
+   </div><br><br>
+   <p class="newyear">NewYear's Countdown</p>
+   
+   <p id="countdown"></p> 
+   <svg height="0" width="0">
+    <defs>
+        <clipPath id="svgPath">
+            <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="M0,64L60,58.7C120,53,240,43,360,74.7C480,107,600,181,720,202.7C840,224,960,192,1080,165.3C1200,139,1320,117,1380,106.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"/>
+        </clipPath>
+    </defs>
+</svg>
+  <div id="contact">
+   
+     <p class="contact-heading">Contact</p>
+
+    
+   <p class="social-text">Connect with Rev.Fr. Emmanuel
+   <br>
+   <span class="fa-stack icon-span">
+  <i class="fas fa-circle fa-stack-2x icon-bg"></i>
+  <i class="fas fa-envelope fa-stack-1x icon-V"></i>
+</span>
+   <span class="fa-stack icon-span">
+  <i class="fas fa-circle fa-stack-2x icon-bg"></i>
+  <i class="fab fa-facebook-f fa-stack-1x icon-V"></i>
+</span>
+   <span class="fa-stack icon-span">
+  <i class="fas fa-circle fa-stack-2x icon-bg"></i>
+  <i class="fab fa-whatsapp fa-stack-1x icon-V"></i>
+</span>
+  </p>
+      
+     <footer>
+      <p class="author">Created by <a class ="author-link" href="https://www.facebook.com/chidera.ezenwata">Ezenwata Chidera</a> &copy;2020</p>
+      </footer>
+  </div>
+ 
+   </div>
+    <script src="Weapon X.js" type="text/javascript" charset="utf-8">
+    function loaded(){
+  var loader = document.querySelector(".loader-wrapper");
+  var webContent = document.querySelector(".content-wrapper");
+  var menuBtn = document.querySelector('.menu-icon');
+  var navBar = document.querySelector(".nav-bar");
+  var ID = document.getElementById.bind(document);
+ var links = document.querySelectorAll(".link-item");
+ var write;
+ 
+  setTimeout(()=>{
+    loader.style.display= "none";
+    webContent.style.display="block";
+     write = true;
+     var t;
+ if(write){
+  t = setInterval(typing,130);
+  write = !write;
+ } else {
+   clearInterval(t);
+ }
+  },5000);
+     
+  const navHandler = ()=>{
+    menuBtn.classList.toggle("icon-X");
+    navBar.classList.toggle("nav-bar-visible");
+    
+  };
+  
+for(a =0; a < links.length; a++){
+  links[a].addEventListener('click', navHandler);
+}
+
+  menuBtn.addEventListener('click', navHandler);
+ 
+  
+  setInterval(function(){
+  
+    function addZero(zero) {
+      return (zero < 10)? "0"+String(zero):String(zero);
+    }
+   var newYear = new Date("January 01 2021 00:00:00").getTime();
+   var currentTime = new Date().getTime();
+   var remainingDays = newYear - currentTime;
+   var 
+   days,hours,minutes,seconds;
+   
+   days = Math.floor(remainingDays/(86400000));
+   hours = Math.floor((remainingDays % 86400000)/3600000);
+   minutes = Math.floor((remainingDays % 3600000)/60000);
+   seconds = addZero(Math.floor((remainingDays % 60000)/1000));
+   
+   document.getElementById("countdown").innerHTML = days+"d "+hours+"h "+minutes+"m "+seconds+"s";
+   
+   
+   if(remainingDays < 0){
+     document.getElementById("countdown").innerHTML = "Happy New Year!";
+   }
+  }, 1000);
+ 
+
+  var type = document.querySelector(".season");
+  var cursor = document.querySelector(".cursor");
+  var tStyle;
+  text = "Wishing Most Rev.Fr. Emmanuel Ezenwata a stupendous birthday celebration and a blissful Merry Christmas";
+ 
+  
+var i= 0;
+  
+  function typing() {
+    type.innerHTML += text.charAt(i);
+    i++;
+    
+   if(i == text.length){
+     setTimeout(()=>{
+      i = 0;
+      type.innerHTML = "";
+      typing();
+ },5000);
+   }
+ }
+
+}
+window.onload=loaded();
+    </script>
+  </body>
+</html>
