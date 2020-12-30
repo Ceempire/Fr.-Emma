@@ -45,8 +45,8 @@ body {
 .load {
   margin-top:50px;  
   display: block;
-  width:8px;
-  height:8px;
+  width:9px;
+  height:9px;
   border-radius:50%;
   background-color:#fff;
 }
@@ -532,7 +532,7 @@ body {
   var navBar = document.querySelector(".nav-bar");
   var ID = document.getElementById.bind(document);
  var links = document.querySelectorAll(".link-item");
- var write;
+ var write,text;
  
   setTimeout(()=>{
     loader.style.display= "none";
@@ -581,14 +581,14 @@ for(a =0; a < links.length; a++){
    
    if(remainingDays < 0){
      document.getElementById("countdown").innerHTML = "Happy New Year!";
+     document.querySelector(".newyear").innerHTML = "WELCOME TO 2021";
+     text = "Wishing Most Rev.Fr. Emmanuel Ezenwata a prosperous new year";
    }
   }, 1000);
  
 
   var type = document.querySelector(".season");
-  var cursor = document.querySelector(".cursor");
-  var tStyle;
-  text = "Wishing Most Rev.Fr. Emmanuel Ezenwata a stupendous birthday celebration and a blissful Merry Christmas";
+  text = "Wishing Most Rev.Fr. Emmanuel Ezenwata a blissful Merry Christmas";
  
   
 var i= 0;
